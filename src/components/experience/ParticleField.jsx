@@ -6,8 +6,8 @@ import {
     Color,
     Vector2,
 } from "three";
-import particleVertexShader from "./shader/particles/vertex.glsl";
-import particleFragmentShader from "./shader/particles/fragment.glsl";
+import particleVertexShader from "../../shader/particles/vertex.glsl";
+import particleFragmentShader from "../../shader/particles/fragment.glsl";
 import { useFrame } from "@react-three/fiber";
 
 export default function ParticleField({ count = 5000, collisionMap }) {

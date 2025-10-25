@@ -1,36 +1,44 @@
 import { Html, useProgress } from "@react-three/drei";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Loader() {
-    const { progress } = useProgress();
-    const [isComplete, setIsComplete] = useState();
+    const { progress, active } = useProgress();
     const [displayProgress, setDisplayProgress] = useState(0);
+    const [show, setShow] = useState(true);
 
-    // Smoothly animate the progress bar from 0 to the actual progress
     useEffect(() => {
-        const interval = setInterval(() => {
+        let animationFrameId;
+        const animate = () => {
             setDisplayProgress((prev) => {
-                const next = prev + Math.random() * 15;
-                return next > progress ? progress : next;
+                if (prev >= progress) return progress;
+                const diff = progress - prev;
+                const step = diff * 0.1;
+                return prev + step;
             });
-        }, 200);
-
-        return () => clearInterval(interval);
+            animationFrameId = requestAnimationFrame(animate);
+        };
+        animationFrameId = requestAnimationFrame(animate);
+        return () => cancelAnimationFrame(animationFrameId);
     }, [progress]);
 
     useEffect(() => {
-        if (progress === 100) {
-            setDisplayProgress(100);
+        // When loading is complete (active is false)
+        if (!active) {
+            // Wait a moment for the 100% to be visible
             setTimeout(() => {
-                setIsComplete(true);
+                setShow(false);
             }, 500);
         }
-    }, [progress]);
+    }, [active]);
 
     return (
         <Html fullscreen>
             <div
-                className={`progress ${isComplete ? "progress-complete" : ""}`}
+                className="progress"
+                style={{
+                    opacity: show ? 1 : 0,
+                    transition: "opacity 1s ease",
+                }}
             >
                 <div className="progress-container">
                     <h2 className="loader-title">Loading Experience</h2>

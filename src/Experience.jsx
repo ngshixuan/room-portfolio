@@ -1,8 +1,8 @@
-import Room from "./Room";
-import Lights from "./Lights";
-import GradientBackground from "./GradientBackground";
-import ParticleField from "./ParticleField";
-import HeightMap from "./HeightMap";
+import Room from "./components/experience/Room";
+import Lights from "./components/experience/Lights";
+import GradientBackground from "./components/experience/GradientBackground";
+import ParticleField from "./components/experience/ParticleField";
+import HeightMap from "./components/experience/HeightMap";
 import { useEffect, useMemo } from "react";
 import { LinearFilter, RGBAFormat, WebGLRenderTarget } from "three";
 import { useThree } from "@react-three/fiber";

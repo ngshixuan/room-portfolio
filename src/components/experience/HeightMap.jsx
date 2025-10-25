@@ -1,8 +1,8 @@
 import { useFrame, useThree } from "@react-three/fiber";
 import { useEffect, useMemo } from "react";
 import { OrthographicCamera, ShaderMaterial, Vector3 } from "three";
-import heightVertex from "./shader/heightMap/vertex.glsl";
-import heightFragment from "./shader/heightMap/fragment.glsl";
+import heightVertex from "../../shader/heightMap/vertex.glsl";
+import heightFragment from "../../shader/heightMap/fragment.glsl";
 
 const heightMapMaterial = new ShaderMaterial({
     vertexShader: heightVertex,

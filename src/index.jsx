@@ -2,16 +2,18 @@ import "./style.css";
 import Experience from "./Experience";
 import { Canvas } from "@react-three/fiber";
 import ReactDOM from "react-dom/client";
-import Content from "./Content";
+import Content from "./components/ui/Content";
 import SmoothScroll from "./SmoothScroll";
 import { Suspense, useState } from "react";
-import Loader from "./Loader";
+import Loader from "./components/ui/Loader";
 
 function App() {
     const [started, setStarted] = useState(false);
+
     return (
         <>
             <SmoothScroll />
+
             <Canvas
                 camera={{
                     fov: 45,
@@ -27,10 +29,12 @@ function App() {
                         started={started}
                     />
                 </Suspense>
-                {/* <Loader /> */}
             </Canvas>
             <div
-                style={{ opacity: started ? 1 : 0, transition: "opacity 0.3s" }}
+                style={{
+                    opacity: started ? 1 : 0,
+                    transition: "opacity 0.5s ease-in-out 0.5s",
+                }}
             >
                 <Content />
             </div>

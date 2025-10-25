@@ -1,7 +1,7 @@
 import { useFrame, useThree } from "@react-three/fiber";
 import { useEffect, useMemo, useRef } from "react";
-import vertexShader from "./shader/background/vertex.glsl";
-import fragmentShader from "./shader/background/fragment.glsl";
+import vertexShader from "../../shader/background/vertex.glsl";
+import fragmentShader from "../../shader/background/fragment.glsl";
 import * as THREE from "three";
 import { Plane } from "@react-three/drei";
 
