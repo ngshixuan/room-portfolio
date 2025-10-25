@@ -1,0 +1,43 @@
+import Room from "./Room";
+import Lights from "./Lights";
+import GradientBackground from "./GradientBackground";
+import ParticleField from "./ParticleField";
+import HeightMap from "./HeightMap";
+import { useEffect, useMemo } from "react";
+import { LinearFilter, RGBAFormat, WebGLRenderTarget } from "three";
+import { useThree } from "@react-three/fiber";
+
+export default function Experience({ onStarted, started }) {
+    const { size } = useThree();
+
+    const surfaceMapTarget = useMemo(() => {
+        return new WebGLRenderTarget(512, 512, {
+            minFilter: LinearFilter,
+            magFilter: LinearFilter,
+            format: RGBAFormat,
+            stencilBuffer: false,
+        });
+    }, []);
+
+    useEffect(() => {
+        if (onStarted) {
+            onStarted();
+        }
+    }, [onStarted]);
+
+    useEffect(() => {
+        surfaceMapTarget.setSize(size.width, size.height);
+    }, [size, surfaceMapTarget]);
+
+    return (
+        <>
+            <GradientBackground />
+            <HeightMap renderTarget={surfaceMapTarget} />
+
+            <ParticleField collisionMap={surfaceMapTarget.texture} />
+            <Room />
+
+            <Lights />
+        </>
+    );
+}
