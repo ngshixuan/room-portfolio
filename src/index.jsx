@@ -13,7 +13,6 @@ function App() {
     return (
         <>
             <SmoothScroll />
-
             <Canvas
                 camera={{
                     fov: 45,

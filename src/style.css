@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: "Montserrat", sans-serif;
 }
 
 #root {
@@ -91,13 +92,16 @@ body {
     border-radius: 0 20px;
 }
 
-.about-title > h1 {
+.about-title {
+    padding-top: 10%;
+}
+
+.about h1 {
     font-size: 4rem;
     color: #2d3748;
 }
 
 .about-text {
-    height: 100vh;
     line-height: 1.8;
     width: 80%;
 }
@@ -171,4 +175,81 @@ body {
     font-weight: 300;
     margin-bottom: 40px;
     letter-spacing: 1px;
+}
+
+.work-title {
+    padding-top: 15%;
+}
+
+.work-card {
+    background-color: #cccac4;
+    padding: 30px 30px 20px 30px;
+    width: 70%;
+    border-radius: 20px;
+    margin-bottom: 7%;
+}
+
+.work-card p {
+    margin: 0;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.img-wrapper img {
+    object-fit: cover;
+    width: 100%;
+    transition: transform 400ms;
+    transition: 200ms ease-in-out;
+}
+
+.img-wrapper > .content {
+    position: absolute;
+    inset: 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 200ms ease-in-out;
+}
+
+.content svg {
+    width: 70px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.img-wrapper > .content.fade {
+    opacity: 0;
+}
+
+.img-wrapper:hover > .content.fade {
+    opacity: 1;
+}
+
+.img-wrapper:hover img {
+    transform: scale(1.2);
+}
+
+.tech-stack {
+    padding: 5% 0;
+}
+
+.tech-stack .tech {
+    font-size: 0.8rem;
+    margin-right: 10px;
+    padding: 5px 15px;
+    border: solid 2px #333;
+    border-radius: 20px;
+}
+
+.tech:hover {
+    background-color: #333;
+    color: #fff;
 }
