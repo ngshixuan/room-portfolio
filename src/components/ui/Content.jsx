@@ -58,7 +58,7 @@ export default function Content() {
                         <div className="work-card">
                             <div className="img-wrapper">
                                 <img src={ecoEatsImg} alt="" />
-                                <div className="content fade">
+                                <div className="img-content fade">
                                     <a
                                         href="https://ecoeats-ten.vercel.app"
                                         target="_blank"
@@ -121,7 +121,7 @@ export default function Content() {
                         <div className="work-card">
                             <div className="img-wrapper">
                                 <img src={threejsImg} alt="" />
-                                <div className="content fade">
+                                <div className="img-content fade">
                                     <a
                                         href="https://threejs-nine-psi.vercel.app/"
                                         target="_blank"
@@ -184,7 +184,7 @@ export default function Content() {
                         <div className="work-card">
                             <div className="img-wrapper">
                                 <img src={weatherImg} alt="" />
-                                <div className="content fade">
+                                <div className="img-content fade">
                                     <a
                                         href="https://threejs-nine-psi.vercel.app/"
                                         target="_blank"

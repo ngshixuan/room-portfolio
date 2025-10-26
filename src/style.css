@@ -208,7 +208,7 @@ body {
     transition: 200ms ease-in-out;
 }
 
-.img-wrapper > .content {
+.img-wrapper > .img-content {
     position: absolute;
     inset: 0;
     padding: 1rem;
@@ -219,17 +219,17 @@ body {
     transition: 200ms ease-in-out;
 }
 
-.content svg {
+.img-content svg {
     width: 70px;
     padding: 20px;
     cursor: pointer;
 }
 
-.img-wrapper > .content.fade {
+.img-wrapper > .img-content.fade {
     opacity: 0;
 }
 
-.img-wrapper:hover > .content.fade {
+.img-wrapper:hover > .img-content.fade {
     opacity: 1;
 }
 
