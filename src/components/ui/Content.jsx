@@ -185,7 +185,7 @@ export default function Content() {
                             <div className="img-wrapper">
                                 <img src={weatherImg} alt="" />
                                 <div className="img-content fade">
-                                    <a
+                                    {/* <a
                                         href="https://threejs-nine-psi.vercel.app/"
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -214,7 +214,7 @@ export default function Content() {
                                                 ></path>{" "}
                                             </g>
                                         </svg>
-                                    </a>
+                                    </a> */}
                                     <a
                                         href="https://github.com/ngshixuan/Weather-app"
                                         target="_blank"
