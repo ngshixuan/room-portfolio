@@ -1,11 +1,11 @@
 import "./style.css";
-import Experience from "./Experience";
 import { Canvas } from "@react-three/fiber";
 import ReactDOM from "react-dom/client";
 import Content from "./components/ui/Content";
-import SmoothScroll from "./SmoothScroll";
+import SmoothScroll from "./components/ui/SmoothScroll";
 import { Suspense, useState } from "react";
 import Loader from "./components/ui/Loader";
+import Scene from "./components/experience/Scene";
 
 function App() {
     const [started, setStarted] = useState(false);
@@ -22,17 +22,18 @@ function App() {
                 }}
                 className="canvas-background"
             >
-                <Suspense fallback={<Loader />}>
-                    <Experience
+                <Suspense fallback={null}>
+                    <Scene
                         onStarted={() => setStarted(true)}
                         started={started}
                     />
+                    <Loader />
                 </Suspense>
             </Canvas>
             <div
                 style={{
                     opacity: started ? 1 : 0,
-                    transition: "opacity 0.5s ease-in-out 0.5s",
+                    transition: "opacity 2s ease-in-out 0.5s",
                 }}
             >
                 <Content />

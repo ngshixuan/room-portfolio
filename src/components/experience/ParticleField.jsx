@@ -34,7 +34,6 @@ export default function ParticleField({ count = 5000, collisionMap }) {
     const uniforms = useMemo(
         () => ({
             uTime: { value: 0 },
-            uMouse: { value: new Vector2(0.0) },
             uCollisionMap: { value: collisionMap },
             uColor: { value: new Color(0.8, 0.8, 1.0) },
         }),

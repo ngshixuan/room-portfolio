@@ -1,5 +1,4 @@
 uniform float uTime;
-uniform vec2 uMouse;
 uniform sampler2D uCollisionMap;
 
 attribute float aRandom;

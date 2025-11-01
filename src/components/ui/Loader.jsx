@@ -7,27 +7,30 @@ export default function Loader() {
     const [show, setShow] = useState(true);
 
     useEffect(() => {
-        let animationFrameId;
-        const animate = () => {
-            setDisplayProgress((prev) => {
-                if (prev >= progress) return progress;
-                const diff = progress - prev;
-                const step = diff * 0.1;
-                return prev + step;
-            });
+        if (active) {
+            let animationFrameId;
+            const animate = () => {
+                setDisplayProgress((prev) => {
+                    if (prev >= progress) return progress;
+                    const diff = progress - prev;
+                    const step = diff * 0.1;
+                    return prev + step;
+                });
+                animationFrameId = requestAnimationFrame(animate);
+            };
             animationFrameId = requestAnimationFrame(animate);
-        };
-        animationFrameId = requestAnimationFrame(animate);
-        return () => cancelAnimationFrame(animationFrameId);
-    }, [progress]);
+            return () => cancelAnimationFrame(animationFrameId);
+        }
+    }, [progress, active]);
 
     useEffect(() => {
         // When loading is complete (active is false)
         if (!active) {
+            setDisplayProgress(100);
             // Wait a moment for the 100% to be visible
             setTimeout(() => {
                 setShow(false);
-            }, 500);
+            }, 800);
         }
     }, [active]);
 
