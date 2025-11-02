@@ -279,7 +279,6 @@ section {
 }
 
 .contact {
-    /* Reuse your work-card styling */
     background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(15px);
     border-radius: 15px;
@@ -343,7 +342,6 @@ section {
     transition: color 0.3s ease-in-out;
 }
 
-/* The hover effect! */
 .footer a:hover {
     color: #5e5e5e;
 }

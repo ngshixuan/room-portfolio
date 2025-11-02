@@ -288,10 +288,18 @@ export default function Content() {
                                 </a>
                             </div>
                             <div className="social">
-                                <a href="https://www.linkedin.com/in/ng-s-777563122/">
+                                <a
+                                    href="https://www.linkedin.com/in/ng-s-777563122/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     LinkedIn
                                 </a>
-                                <a href="https://github.com/ngshixuan">
+                                <a
+                                    href="https://github.com/ngshixuan"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     Github
                                 </a>
                             </div>
