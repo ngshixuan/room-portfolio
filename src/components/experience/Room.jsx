@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/all";
 import { useEffect, useRef, useMemo } from "react";
 import { CanvasTexture, RepeatWrapping } from "three";
 
-export default function Room({}) {
+export default function Room() {
     const room = useGLTF("./room.glb");
 
     const groupRef = useRef();
@@ -47,17 +47,42 @@ export default function Room({}) {
 
         if (groupRef.current) {
             gsap.registerPlugin(ScrollTrigger);
-            gsap.to(groupRef.current.position, {
-                x: () => window.innerWidth * 0.0018,
-                duration: 8,
-                ease: "power1.inOut",
+            const masterTL = gsap.timeline({
                 scrollTrigger: {
-                    trigger: ".animation-section",
+                    trigger: ".animation-section", // Start when the first section is at the top
                     start: "top top",
+                    endTrigger: ".hero-content", // End when the ".hero-content" section is at the bottom
                     end: "bottom bottom",
-                    scrub: 3,
+                    scrub: 2,
                     invalidateOnRefresh: true,
                 },
+            });
+
+            masterTL.to(groupRef.current.position, {
+                x: () => window.innerWidth * 0.0018,
+                ease: "power1.inOut",
+            });
+
+            masterTL.to(groupRef.current.position, {
+                x: () => window.innerWidth * -0.0005,
+                ease: "power1.inOut",
+            });
+
+            masterTL.to(groupRef.current.position, {
+                z: 3,
+                ease: "power1.inOut",
+            });
+
+            masterTL.to({}, { duration: 0.5 });
+
+            masterTL.to(groupRef.current.position, {
+                x: 1,
+                ease: "power1.inOut",
+            });
+
+            masterTL.to(groupRef.current.position, {
+                y: 1,
+                ease: "power1.inOut",
             });
         }
 
@@ -68,7 +93,7 @@ export default function Room({}) {
         };
     }, []);
 
-    useFrame((state) => {
+    useFrame(() => {
         if (!groupRef.current) return;
 
         currentRotation.current +=

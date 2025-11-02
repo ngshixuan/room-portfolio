@@ -85,23 +85,41 @@ body {
     height: 150vh;
 }
 
+.animation-section-2 {
+    height: 200vh;
+}
+
 .about {
     background: rgba(232, 237, 230, 0.6);
     width: 45%;
     padding: 20px 0 20px 100px;
-    border-radius: 0 20px;
+    border-radius: 20px;
+    height: 150vh;
+}
+
+.work-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5rem 0;
+}
+
+.work {
+    background: rgba(232, 237, 230, 0.6);
+    width: 40%;
+    padding: 20px 0 20px 100px;
+    border-radius: 20px;
 }
 
 .about-title {
     padding-top: 10%;
-    border-bottom: 2px solid #2d3748;
-    width: 80%;
 }
 
-.about h1 {
+.about h1,
+.work h1 {
     font-size: 4rem;
     color: #2d3748;
-    margin-bottom: 3%;
 }
 
 .about-text {
@@ -180,17 +198,15 @@ body {
     letter-spacing: 1px;
 }
 
-.work-title {
-    padding-top: 15%;
-    border-bottom: 2px solid #2d3748;
-    width: 80%;
-    margin-bottom: 3%;
+section {
+    margin-bottom: 50%;
 }
 
 .work-card {
-    background-color: #cccac4;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 30px 30px 20px 30px;
-    width: 70%;
+    width: 80%;
     border-radius: 20px;
     margin-bottom: 7%;
 }
@@ -199,6 +215,7 @@ body {
     margin: 0;
     line-height: 1.8;
     text-align: justify;
+    color: #555;
 }
 
 .img-wrapper {
@@ -219,6 +236,7 @@ body {
     inset: 0;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(1px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -251,11 +269,81 @@ body {
     font-size: 0.8rem;
     margin-right: 10px;
     padding: 5px 15px;
-    border: solid 2px #333;
+    border: solid 1px #555;
     border-radius: 20px;
 }
 
 .tech:hover {
     background-color: #333;
     color: #fff;
+}
+
+.contact {
+    /* Reuse your work-card styling */
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 0 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-card {
+    font-size: 1.1rem;
+}
+
+.contact-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    text-transform: uppercase;
+}
+
+.contact-title {
+    text-align: right;
+}
+
+.contact-title > h1 {
+    font-size: 15rem;
+    color: #212121;
+    margin: 0;
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+}
+
+.contact-intro {
+    max-width: 600px;
+    margin: 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2%;
+}
+
+.location {
+    margin-bottom: 10%;
+}
+
+.location p {
+    margin: 0;
+}
+
+.social > a {
+    padding-left: 25px;
+}
+
+.footer a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+/* The hover effect! */
+.footer a:hover {
+    color: #5e5e5e;
 }
