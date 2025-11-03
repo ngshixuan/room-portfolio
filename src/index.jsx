@@ -3,12 +3,21 @@ import { Canvas } from "@react-three/fiber";
 import ReactDOM from "react-dom/client";
 import Content from "./components/ui/Content";
 import SmoothScroll from "./components/ui/SmoothScroll";
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Loader from "./components/ui/Loader";
 import Scene from "./components/experience/Scene";
+import { useProgress } from "@react-three/drei";
 
 function App() {
-    const [started, setStarted] = useState(false);
+    const { active } = useProgress();
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    useEffect(() => {
+        // When loading is finished, update the state
+        if (!active) {
+            setIsLoaded(true);
+        }
+    }, [active]);
 
     return (
         <>
@@ -23,16 +32,13 @@ function App() {
                 className="canvas-background"
             >
                 <Suspense fallback={null}>
-                    <Scene
-                        onStarted={() => setStarted(true)}
-                        started={started}
-                    />
+                    <Scene visible={isLoaded} />
                     <Loader />
                 </Suspense>
             </Canvas>
             <div
                 style={{
-                    opacity: started ? 1 : 0,
+                    opacity: isLoaded ? 1 : 0,
                     transition: "opacity 2s ease-in-out 0.5s",
                 }}
             >
@@ -44,4 +50,8 @@ function App() {
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 
-root.render(<App />);
+root.render(
+    <Suspense fallback={null}>
+        <App />
+    </Suspense>
+);

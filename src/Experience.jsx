@@ -7,7 +7,7 @@ import { useEffect, useMemo } from "react";
 import { LinearFilter, RGBAFormat, WebGLRenderTarget } from "three";
 import { useThree } from "@react-three/fiber";
 
-export default function Experience({ onStarted, started }) {
+export default function Experience() {
     const { size } = useThree();
 
     const surfaceMapTarget = useMemo(() => {
@@ -18,12 +18,6 @@ export default function Experience({ onStarted, started }) {
             stencilBuffer: false,
         });
     }, []);
-
-    useEffect(() => {
-        if (onStarted) {
-            onStarted();
-        }
-    }, [onStarted]);
 
     useEffect(() => {
         surfaceMapTarget.setSize(size.width, size.height);
