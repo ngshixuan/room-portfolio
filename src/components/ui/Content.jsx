@@ -37,26 +37,6 @@ export default function Content() {
 
         return () => clearTimeout(timeoutId);
     }, [height]);
-
-    useEffect(() => {
-        // Function to set the custom property
-        const setVh = () => {
-            // We get the inner height of the window and calculate 1% of it
-            let vh = window.innerHeight * 0.01;
-            // Then we set the value in the --vh custom property on the root element
-            document.documentElement.style.setProperty("--vh", `${vh}px`);
-        };
-
-        // Set the initial value
-        setVh();
-
-        // Add an event listener for the resize event
-        window.addEventListener("resize", setVh);
-
-        // Clean up the event listener when the component unmounts
-        return () => window.removeEventListener("resize", setVh);
-    }, []);
-
     return (
         <>
             <div className="content">
