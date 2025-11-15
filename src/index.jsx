@@ -7,6 +7,7 @@ import { Suspense, useEffect, useState } from "react";
 import Loader from "./components/ui/Loader";
 import Scene from "./components/experience/Scene";
 import { useProgress } from "@react-three/drei";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
     const { active } = useProgress();
@@ -44,6 +45,7 @@ function App() {
             >
                 <Content />
             </div>
+            <Analytics />
         </>
     );
 }
