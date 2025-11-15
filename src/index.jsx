@@ -45,7 +45,6 @@ function App() {
             >
                 <Content />
             </div>
-            <Analytics />
         </>
     );
 }
@@ -55,5 +54,6 @@ const root = ReactDOM.createRoot(document.querySelector("#root"));
 root.render(
     <Suspense fallback={null}>
         <App />
+        <Analytics />
     </Suspense>
 );
