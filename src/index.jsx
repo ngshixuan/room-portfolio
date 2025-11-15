@@ -31,7 +31,6 @@ function App() {
                         far: 200,
                         position: [2.5, 2.5, 8],
                     }}
-                    className="canvas-background"
                 >
                     <Suspense fallback={null}>
                         <Scene visible={isLoaded} />
