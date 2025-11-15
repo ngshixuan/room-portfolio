@@ -1,5 +1,5 @@
 import { useGLTF } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useThree } from "@react-three/fiber";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useEffect, useRef, useMemo } from "react";
@@ -7,10 +7,15 @@ import { CanvasTexture, RepeatWrapping } from "three";
 
 export default function Room() {
     const room = useGLTF("./room.glb");
+    const { viewport } = useThree();
 
     const groupRef = useRef();
     const targetRotation = useRef(0);
     const currentRotation = useRef(0);
+
+    const isMobile = viewport.width < 5;
+    const responsiveScale = isMobile ? 0.15 : 0.25;
+    const responsivePos = isMobile ? 0.4 : 0.6;
 
     const alphaMap = useMemo(() => {
         const canvas = document.createElement("canvas");
@@ -106,8 +111,8 @@ export default function Room() {
             <group ref={groupRef}>
                 <primitive
                     object={room.scene}
-                    scale={0.25}
-                    position={[0.6, -1, 0]}
+                    scale={responsiveScale}
+                    position={[responsivePos, -1, 0]}
                 />
             </group>
             <mesh

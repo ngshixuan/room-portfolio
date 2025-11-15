@@ -1,37 +1,59 @@
 import ecoEatsImg from "../../images/ecoeats.png";
 import weatherImg from "../../images/weather.png";
 import threejsImg from "../../images/threejs.png";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+const useWindowSize = () => {
+    const [size, setSize] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight,
+    });
+
+    useEffect(() => {
+        const handleResize = () => {
+            setSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+    return size;
+};
 
 export default function Content() {
-    useEffect(() => {
-        // This function will be called once all assets (like images) are fully loaded.
-        const handleLoad = () => {
-            console.log("Window loaded, refreshing ScrollTrigger...");
-            ScrollTrigger.refresh();
-        };
+    const { width } = useWindowSize();
 
-        // Add the event listener
-        window.addEventListener("load", handleLoad);
+    const isMobile = width < 768;
 
-        // Cleanup function to remove the listener when the component unmounts
-        return () => {
-            window.removeEventListener("load", handleLoad);
-        };
-    }, []);
+    // useEffect(() => {
+    //     const handleLoad = () => {
+    //         console.log("Window loaded, refreshing ScrollTrigger...");
+    //         ScrollTrigger.refresh();
+    //     };
+
+    //     window.addEventListener("load", handleLoad);
+
+    //     return () => {
+    //         window.removeEventListener("load", handleLoad);
+    //     };
+    // }, []);
     return (
         <>
             <div className="content">
                 <div className="content-overlay">
                     <section className="description">
-                        <div className="intro">
-                            <h1 className="text-6xl pb-5 font-bold">
+                        <div className="intro absolute md:right-[60%] top-[70%] left-[5%]">
+                            <h1 className="text-3xl md:text-6xl pb-2 md:pb-5 font-bold">
                                 Ng Shi Xuan
                             </h1>
-                            <p className="text-2xl">Web Developer</p>
+                            <p className="text-xl md:text-2xl">Web Developer</p>
                         </div>
-                        <div className="intro-second">
-                            <h1 className="text-3xl font-bold">
+                        <div className="intro-second absolute md:right-0 right-[5%] md:top-[20%] top-[25%]">
+                            <h1 className="text-2xl md:text-3xl font-bold">
                                 MY <br />
                                 PORTFOLIO
                             </h1>
@@ -52,12 +74,14 @@ export default function Content() {
                     <section className="animation-section"></section>
                 </div>
                 <div className="hero-content">
-                    <div className="about w-1/2 pt-4 pb-4 pl-[100px] rounded-3xl">
+                    <div className="about w-full md:w-1/2 px-6 py-4 md:px-0 md:pl-[100px] rounded-3xl">
                         <section className="about-section">
                             <div className="about-title py-10 mt-10">
-                                <h1 className="font-bold text-6xl">About Me</h1>
+                                <h1 className="font-bold text-5xl md:text-6xl">
+                                    About Me
+                                </h1>
                             </div>
-                            <div className="about-text w-5/6 leading-[1.8] text-lg">
+                            <div className="about-text w-full md:w-5/6 leading-[1.8] text-base md:text-lg">
                                 <p className="pb-4">
                                     Hi there, I am a{" "}
                                     <strong>
@@ -80,15 +104,15 @@ export default function Content() {
                         </section>
                     </div>
                     <section className="animation-section-2"></section>
-                    <div className="justify-end flex">
-                        <div className="work w-2/5 py-10 pl-[100px] rounded-3xl">
+                    <div className="flex md:justify-end">
+                        <div className="work w-full md:w-2/5 md:px-0 py-10 px-6 md:pl-[100px] rounded-3xl">
                             <div className="work-title">
-                                <h1 className="font-bold text-6xl my-10">
+                                <h1 className="font-bold text-5xl md:text-6xl my-10">
                                     My Work
                                 </h1>
                             </div>
-                            <div className="work-text w-9/10">
-                                <div className="work-card rounded-3xl mb-10 p-8">
+                            <div className="work-text w-full md:w-9/10">
+                                <div className="work-card rounded-3xl mb-10 p-6 md:p-8">
                                     <div className="img-wrapper">
                                         <img src={ecoEatsImg} alt="" />
                                         <div className="img-content fade">
@@ -146,11 +170,19 @@ export default function Content() {
                                         interactive features and engaging
                                         visuals.
                                     </p>
-                                    <div className="tech-stack">
-                                        <span className="tech">React</span>
-                                        <span className="tech">Firebase</span>
-                                        <span className="tech">TailWind</span>
-                                        <span className="tech">Ant Design</span>
+                                    <div className="flex flex-wrap text-xs mt-4 tech-stack">
+                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                            React
+                                        </span>
+                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                            Firebase
+                                        </span>
+                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                            TailWind
+                                        </span>
+                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                            Ant Design
+                                        </span>
                                     </div>
                                 </div>
                                 <div className="work-card rounded-3xl mb-10 p-8">
@@ -211,11 +243,19 @@ export default function Content() {
                                         WebGL and interactive graphics on the
                                         web.
                                     </p>
-                                    <div className="tech-stack">
-                                        <span className="tech">HTML</span>
-                                        <span className="tech">CSS</span>
-                                        <span className="tech">JavaScript</span>
-                                        <span className="tech">ThreeJS</span>
+                                    <div className="flex flex-wrap text-xs mt-4 tech-stack">
+                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                            HTML
+                                        </span>
+                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                            CSS
+                                        </span>
+                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                            JavaScript
+                                        </span>
+                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                            ThreeJS
+                                        </span>
                                     </div>
                                 </div>
                                 <div className="work-card rounded-3xl mb-10 p-8">
@@ -275,10 +315,16 @@ export default function Content() {
                                         forecasts, temperature trends, and live
                                         updates for cities around the world.
                                     </p>
-                                    <div className="tech-stack">
-                                        <span className="tech">HTML</span>
-                                        <span className="tech">CSS</span>
-                                        <span className="tech">JavaScript</span>
+                                    <div className="flex flex-wrap text-xs mt-4 tech-stack">
+                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                            HTML
+                                        </span>
+                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                            CSS
+                                        </span>
+                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                            JavaScript
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -286,23 +332,51 @@ export default function Content() {
                     </div>
                     <section className="animation-section-2"></section>
                     <div className="contact">
-                        <div className="contact-hero">
-                            <div className="contact-card">
-                                <div className="location">
-                                    <div>Location:</div>
-                                    <p>Pasir Ris, Singapore</p>
+                        {isMobile ? (
+                            <div className="contact-hero h-screen uppercase flex items-center">
+                                <div>
+                                    <div className="contact-title">
+                                        <h1 className="font-light text-5xl">
+                                            GET IN TOUCH
+                                        </h1>
+                                    </div>
+                                    <div className="contact-card pt-10 mt-10">
+                                        <div className="location">
+                                            <div>Location:</div>
+                                            <p>Pasir Ris, Singapore</p>
+                                        </div>
+                                        <div>Message:</div>
+                                        <p className="contact-intro">
+                                            I'm currently seeking new
+                                            opportunities and would love to hear
+                                            about roles where I can contribute
+                                            to...
+                                        </p>
+                                    </div>
                                 </div>
-                                <div>Message:</div>
-                                <p className="contact-intro">
-                                    I'm currently seeking new opportunities and
-                                    would love to hear about roles where I can
-                                    contribute to...
-                                </p>
                             </div>
-                            <div className="contact-title">
-                                <h1>GET IN TOUCH</h1>
+                        ) : (
+                            <div className="contact-hero flex justify-between items-center h-screen uppercase">
+                                <div className="contact-card">
+                                    <div className="location">
+                                        <div>Location:</div>
+                                        <p>Pasir Ris, Singapore</p>
+                                    </div>
+                                    <div>Message:</div>
+                                    <p className="contact-intro">
+                                        I'm currently seeking new opportunities
+                                        and would love to hear about roles where
+                                        I can contribute to...
+                                    </p>
+                                </div>
+                                <div className="contact-title text-right">
+                                    <h1 className="font-light md:text-[13rem] text-4xl">
+                                        GET IN TOUCH
+                                    </h1>
+                                </div>
                             </div>
-                        </div>
+                        )}
+
                         <div className="footer">
                             <div>
                                 <a href="mailto:shixuanx@gmail.com">
