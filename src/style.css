@@ -12,6 +12,7 @@ body {
 
 .canvas-background {
     position: fixed !important;
+    height: 150vh;
     z-index: -1;
 }
 
