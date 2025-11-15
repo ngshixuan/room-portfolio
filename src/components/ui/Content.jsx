@@ -58,7 +58,7 @@ export default function Content() {
                                 PORTFOLIO
                             </h1>
                         </div>
-                        <div className="arrow-svg-wrapper">
+                        <div className="arrow-svg-wrapper absolute right-[50%] md:bottom-[10%] bottom-[15%]">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 height="24"
@@ -377,7 +377,7 @@ export default function Content() {
                             </div>
                         )}
 
-                        <div className="footer">
+                        <div className="footer md:text-base text-xs">
                             <div>
                                 <a href="mailto:shixuanx@gmail.com">
                                     shixuanx@gmail.com

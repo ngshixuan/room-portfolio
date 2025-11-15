@@ -37,9 +37,6 @@ body {
 }
 
 .arrow-svg-wrapper {
-    position: absolute;
-    top: 90%;
-    left: 50%;
     transform: translate(-50%, -50%);
     animation: bounce 2s ease-in alternate infinite;
 }
@@ -260,8 +257,6 @@ body {
 
 .footer a {
     color: #333;
-    text-decoration: none;
-    font-size: 16px;
     font-weight: 500;
     transition: color 0.3s ease-in-out;
 }
