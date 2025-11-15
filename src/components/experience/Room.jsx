@@ -13,9 +13,12 @@ export default function Room() {
     const targetRotation = useRef(0);
     const currentRotation = useRef(0);
 
-    const isMobile = viewport.width < 5;
-    const responsiveScale = isMobile ? 0.15 : 0.25;
-    const responsivePos = isMobile ? 0.4 : 0.6;
+    const [responsiveScale, responsivePos] = useMemo(() => {
+        const isMobile = viewport.width < 5;
+        const scale = isMobile ? 0.15 : 0.25;
+        const position = isMobile ? 0.4 : 0.6;
+        return [scale, position];
+    }, [viewport.width]);
 
     const alphaMap = useMemo(() => {
         const canvas = document.createElement("canvas");
