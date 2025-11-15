@@ -1,5 +1,6 @@
+@import "tailwindcss";
+
 body {
-    margin: 0;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -54,16 +55,7 @@ body {
     height: 100vh;
 }
 
-.intro > h1 {
-    font-size: 4rem;
-    margin-bottom: 0;
-    color: #d9c9b9;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    font-family: "Montserrat", sans-serif;
-}
-
-.intro > p {
-    font-size: 1.5rem;
+.intro {
     color: #d9c9b9;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     font-family: "Montserrat", sans-serif;
@@ -76,7 +68,6 @@ body {
 }
 
 .intro-second h1 {
-    margin: 0;
     color: #212121;
     font-family: "Playfair Display", serif;
 }
@@ -91,44 +82,16 @@ body {
 
 .about {
     background: rgba(232, 237, 230, 0.6);
-    width: 45%;
-    padding: 20px 0 20px 100px;
-    border-radius: 20px;
     height: 150vh;
-}
-
-.work-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    padding: 5rem 0;
 }
 
 .work {
     background: rgba(232, 237, 230, 0.6);
-    width: 40%;
-    padding: 20px 0 20px 100px;
-    border-radius: 20px;
-}
-
-.about-title {
-    padding-top: 10%;
 }
 
 .about h1,
 .work h1 {
-    font-size: 4rem;
     color: #2d3748;
-}
-
-.about-text {
-    line-height: 1.8;
-    width: 80%;
-}
-
-.about-text > p {
-    font-size: 1.1rem;
 }
 
 /* Loader */
@@ -201,14 +164,15 @@ body {
 .work-card {
     background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    padding: 30px 30px 20px 30px;
-    width: 80%;
-    border-radius: 20px;
-    margin-bottom: 7%;
+}
+
+.work-card h3 {
+    font-weight: bold;
+    padding: 15px 0;
+    font-size: 1.1rem;
 }
 
 .work-card p {
-    margin: 0;
     line-height: 1.8;
     text-align: justify;
     color: #555;
@@ -258,7 +222,7 @@ body {
 }
 
 .tech-stack {
-    padding: 5% 0;
+    padding: 5% 0 0;
 }
 
 .tech-stack .tech {

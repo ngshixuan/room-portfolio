@@ -25,12 +25,16 @@ export default function Content() {
                 <div className="content-overlay">
                     <section className="description">
                         <div className="intro">
-                            <h1>Ng Shi Xuan</h1>
-                            <p>Web Developer</p>
+                            <h1 className="text-6xl pb-5 font-bold">
+                                Ng Shi Xuan
+                            </h1>
+                            <p className="text-2xl">Web Developer</p>
                         </div>
                         <div className="intro-second">
-                            <h1>MY</h1>
-                            <h1>PORTFOLIO</h1>
+                            <h1 className="text-3xl font-bold">
+                                MY <br />
+                                PORTFOLIO
+                            </h1>
                         </div>
                         <div className="arrow-svg-wrapper">
                             <svg
@@ -48,13 +52,13 @@ export default function Content() {
                     <section className="animation-section"></section>
                 </div>
                 <div className="hero-content">
-                    <div className="about">
+                    <div className="about w-1/2 pt-4 pb-4 pl-[100px] rounded-3xl">
                         <section className="about-section">
-                            <div className="about-title">
-                                <h1>About Me</h1>
+                            <div className="about-title py-10 mt-10">
+                                <h1 className="font-bold text-6xl">About Me</h1>
                             </div>
-                            <div className="about-text">
-                                <p>
+                            <div className="about-text w-5/6 leading-[1.8] text-lg">
+                                <p className="pb-4">
                                     Hi there, I am a{" "}
                                     <strong>
                                         self-taught front-end developer
@@ -76,13 +80,15 @@ export default function Content() {
                         </section>
                     </div>
                     <section className="animation-section-2"></section>
-                    <div className="work-container">
-                        <div className="work">
+                    <div className="justify-end flex">
+                        <div className="work w-2/5 py-10 pl-[100px] rounded-3xl">
                             <div className="work-title">
-                                <h1>My Work</h1>
+                                <h1 className="font-bold text-6xl my-10">
+                                    My Work
+                                </h1>
                             </div>
-                            <div className="work-text">
-                                <div className="work-card">
+                            <div className="work-text w-9/10">
+                                <div className="work-card rounded-3xl mb-10 p-8">
                                     <div className="img-wrapper">
                                         <img src={ecoEatsImg} alt="" />
                                         <div className="img-content fade">
@@ -147,7 +153,7 @@ export default function Content() {
                                         <span className="tech">Ant Design</span>
                                     </div>
                                 </div>
-                                <div className="work-card">
+                                <div className="work-card rounded-3xl mb-10 p-8">
                                     <div className="img-wrapper">
                                         <img src={threejsImg} alt="" />
                                         <div className="img-content fade">
@@ -212,7 +218,7 @@ export default function Content() {
                                         <span className="tech">ThreeJS</span>
                                     </div>
                                 </div>
-                                <div className="work-card">
+                                <div className="work-card rounded-3xl mb-10 p-8">
                                     <div className="img-wrapper">
                                         <img src={weatherImg} alt="" />
                                         <div className="img-content fade">
