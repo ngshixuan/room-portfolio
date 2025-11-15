@@ -2,6 +2,7 @@
 
 body {
     font-family: "Montserrat", sans-serif;
+    background: linear-gradient(to bottom, #1e3a8a, #3b0764);
 }
 
 #root {
@@ -12,7 +13,6 @@ body {
 
 .canvas-background {
     position: fixed !important;
-    height: 150vh;
     z-index: -1;
 }
 
