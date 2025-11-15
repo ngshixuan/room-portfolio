@@ -2,6 +2,7 @@ import ecoEatsImg from "../../images/ecoeats.png";
 import weatherImg from "../../images/weather.png";
 import threejsImg from "../../images/threejs.png";
 import { useEffect, useState } from "react";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
