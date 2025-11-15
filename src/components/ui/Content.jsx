@@ -378,7 +378,7 @@ export default function Content() {
                             </div>
                         )}
 
-                        <div className="footer md:text-base text-xs">
+                        <div className="footer flex justify-between md:text-base text-xs mb-8">
                             <div>
                                 <a href="mailto:shixuanx@gmail.com">
                                     shixuanx@gmail.com

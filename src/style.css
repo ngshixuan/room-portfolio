@@ -187,7 +187,7 @@ body {
 }
 
 .img-content svg {
-    width: 70px;
+    width: 100px;
     padding: 20px;
     cursor: pointer;
 }
@@ -216,7 +216,6 @@ body {
 .contact {
     background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(15px);
-    border-radius: 15px;
     padding: 0 40px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -235,18 +234,8 @@ body {
     max-width: 600px;
 }
 
-.footer {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 2%;
-}
-
 .location {
     margin-bottom: 10%;
-}
-
-.location p {
-    margin: 0;
 }
 
 .social > a {
@@ -255,7 +244,6 @@ body {
 
 .footer a {
     color: #333;
-    font-weight: 500;
     transition: color 0.3s ease-in-out;
 }
 
