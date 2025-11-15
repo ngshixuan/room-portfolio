@@ -2,6 +2,9 @@ import ecoEatsImg from "../../images/ecoeats.png";
 import weatherImg from "../../images/weather.png";
 import threejsImg from "../../images/threejs.png";
 import { useEffect, useState } from "react";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const useWindowSize = () => {
     const [size, setSize] = useState({
@@ -37,6 +40,7 @@ export default function Content() {
 
         return () => clearTimeout(timeoutId);
     }, [height]);
+
     return (
         <>
             <div className="content">
