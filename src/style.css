@@ -45,7 +45,7 @@ body {
 
 .description {
     position: relative;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 .intro {
@@ -60,16 +60,16 @@ body {
 }
 
 .animation-section {
-    height: 150vh;
+    height: calc(var(--vh, 1vh) * 150);
 }
 
 .animation-section-2 {
-    height: 200vh;
+    height: calc(var(--vh, 1vh) * 200);
 }
 
 .about {
     background: rgba(232, 237, 230, 0.6);
-    height: 150vh;
+    height: calc(var(--vh, 1vh) * 150);
 }
 
 .work {
@@ -224,6 +224,10 @@ body {
     padding: 0 40px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-hero {
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 .contact-card {
