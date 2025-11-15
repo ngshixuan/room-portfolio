@@ -46,15 +46,6 @@ body {
 .description {
     position: relative;
     height: 100vh;
-    height: -webkit-fill-available;
-    height: 100dvh;
-}
-
-.contact-hero {
-    /* ... existing styles ... */
-    height: 100vh; /* Fallback for older browsers */
-    height: -webkit-fill-available;
-    height: 100dvh;
 }
 
 .intro {

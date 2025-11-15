@@ -25,22 +25,19 @@ const useWindowSize = () => {
 };
 
 export default function Content() {
-    const { width } = useWindowSize();
+    const { width, height } = useWindowSize();
 
     const isMobile = width < 768;
 
-    // useEffect(() => {
-    //     const handleLoad = () => {
-    //         console.log("Window loaded, refreshing ScrollTrigger...");
-    //         ScrollTrigger.refresh();
-    //     };
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            console.log("Window height changed, refreshing ScrollTrigger...");
+            ScrollTrigger.refresh();
+        }, 100); // 100ms delay
 
-    //     window.addEventListener("load", handleLoad);
+        return () => clearTimeout(timeoutId);
+    }, [height]);
 
-    //     return () => {
-    //         window.removeEventListener("load", handleLoad);
-    //     };
-    // }, []);
     return (
         <>
             <div className="content">
