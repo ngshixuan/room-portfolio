@@ -46,7 +46,7 @@ export default function Content() {
             <div className="content">
                 <div className="content-overlay">
                     <section className="description">
-                        <div className="intro absolute md:right-[60%] top-[65%] left-[5%]">
+                        <div className="intro absolute md:right-[60%] top-[65%] md:top-[70%] left-[5%]">
                             <h1 className="text-3xl md:text-6xl pb-2 md:pb-5 font-bold">
                                 Ng Shi Xuan
                             </h1>
@@ -336,7 +336,7 @@ export default function Content() {
                             <div className="contact-hero h-screen uppercase flex items-center">
                                 <div>
                                     <div className="contact-title">
-                                        <h1 className="font-light text-5xl">
+                                        <h1 className="font-light text-4xl">
                                             GET IN TOUCH
                                         </h1>
                                     </div>
