@@ -52,7 +52,7 @@ export default function Content() {
                             </h1>
                             <p className="text-xl md:text-2xl">Web Developer</p>
                         </div>
-                        <div className="intro-second absolute md:right-0 right-[5%] md:top-[20%] top-[25%]">
+                        <div className="intro-second absolute md:right-0 right-[5%] top-[20%]">
                             <h1 className="text-2xl md:text-3xl font-bold">
                                 MY <br />
                                 PORTFOLIO
@@ -171,16 +171,16 @@ export default function Content() {
                                         visuals.
                                     </p>
                                     <div className="flex flex-wrap text-xs mt-4 tech-stack">
-                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
                                             React
                                         </span>
-                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
                                             Firebase
                                         </span>
-                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
                                             TailWind
                                         </span>
-                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
                                             Ant Design
                                         </span>
                                     </div>
@@ -244,16 +244,16 @@ export default function Content() {
                                         web.
                                     </p>
                                     <div className="flex flex-wrap text-xs mt-4 tech-stack">
-                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
                                             HTML
                                         </span>
-                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
                                             CSS
                                         </span>
-                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
                                             JavaScript
                                         </span>
-                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
                                             ThreeJS
                                         </span>
                                     </div>
@@ -316,13 +316,13 @@ export default function Content() {
                                         updates for cities around the world.
                                     </p>
                                     <div className="flex flex-wrap text-xs mt-4 tech-stack">
-                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
                                             HTML
                                         </span>
-                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
                                             CSS
                                         </span>
-                                        <span className="rounded-full px-3 py-1 mr-2 mb-2">
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
                                             JavaScript
                                         </span>
                                     </div>
