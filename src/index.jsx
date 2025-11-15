@@ -23,20 +23,23 @@ function App() {
     return (
         <>
             <SmoothScroll />
-            <Canvas
-                camera={{
-                    fov: 45,
-                    near: 0.1,
-                    far: 200,
-                    position: [2.5, 2.5, 8],
-                }}
-                className="canvas-background"
-            >
-                <Suspense fallback={null}>
-                    <Scene visible={isLoaded} />
-                    <Loader />
-                </Suspense>
-            </Canvas>
+            <div className="canvas-background">
+                <Canvas
+                    camera={{
+                        fov: 45,
+                        near: 0.1,
+                        far: 200,
+                        position: [2.5, 2.5, 8],
+                    }}
+                    className="canvas-background"
+                >
+                    <Suspense fallback={null}>
+                        <Scene visible={isLoaded} />
+                        <Loader />
+                    </Suspense>
+                </Canvas>
+            </div>
+
             <div
                 style={{
                     opacity: isLoaded ? 1 : 0,
