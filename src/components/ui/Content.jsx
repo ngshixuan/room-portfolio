@@ -46,7 +46,7 @@ export default function Content() {
             <div className="content">
                 <div className="content-overlay">
                     <section className="description">
-                        <div className="intro absolute md:right-[60%] top-[70%] left-[5%]">
+                        <div className="intro absolute md:right-[60%] top-[65%] left-[5%]">
                             <h1 className="text-3xl md:text-6xl pb-2 md:pb-5 font-bold">
                                 Ng Shi Xuan
                             </h1>
