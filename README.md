@@ -1,6 +1,6 @@
 # Interactive 3D Room Portfolio
 
-A personal portfolio website featuring an immersive and interactive 3D room built with React Three Fiber and GSAP. The camera and 3D objects animate based on the user's scroll position, creating a dynamic "scrolltelling" experience.
+A personal portfolio website featuring an immersive and interactive 3D room built with React Three Fiber and Blender. The camera and 3D objects animate based on the user's scroll position, creating a dynamic "scrolltelling" experience.
 
 **[Live Demo][(https://room-portfolio-alpha.vercel.app/)]**
 
