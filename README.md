@@ -61,7 +61,7 @@ To get a local copy up and running, follow these simple steps.
 ## Asset Creation
 
 -   The 3D room model (`room.glb`) was custom-designed and modeled for this project using Blender.
--   
+
 ## Contact
 
 Shi Xuan - [shixuanx@gmail.com](mailto:shixuanx@gmail.com)
