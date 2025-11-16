@@ -1,6 +1,6 @@
 # Interactive 3D Room Portfolio
 
-A personal portfolio website featuring an immersive and interactive 3D room built with React Three Fiber and GSAP. The camera and 3D objects animate based on the user's scroll position, creating a dynamic "scrolltelling" experience.
+A personal portfolio website featuring an immersive and interactive 3D room built with React Three Fiber and Blender. The camera and 3D objects animate based on the user's scroll position, creating a dynamic "scrolltelling" experience.
 
 **[Live Demo][(https://room-portfolio-alpha.vercel.app/)]**
 
@@ -42,11 +42,11 @@ To get a local copy up and running, follow these simple steps.
 
 1.  Clone the repo
     ```sh
-    git clone https://github.com/your-username/your-repo-name.git
+    git clone https://github.com/ngshixuan/room-portfolio.git
     ```
 2.  Navigate to the project directory
     ```sh
-    cd your-repo-name
+    cd room-portfolio
     ```
 3.  Install NPM packages
     ```sh
@@ -61,7 +61,7 @@ To get a local copy up and running, follow these simple steps.
 ## Asset Creation
 
 -   The 3D room model (`room.glb`) was custom-designed and modeled for this project using Blender.
--   
+
 ## Contact
 
 Shi Xuan - [shixuanx@gmail.com](mailto:shixuanx@gmail.com)
