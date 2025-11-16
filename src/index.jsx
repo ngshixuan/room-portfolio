@@ -8,6 +8,7 @@ import Loader from "./components/ui/Loader";
 import Scene from "./components/experience/Scene";
 import { useProgress } from "@react-three/drei";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
     const { active } = useProgress();
@@ -55,5 +56,6 @@ root.render(
     <Suspense fallback={null}>
         <App />
         <Analytics />
+        <SpeedInsights />
     </Suspense>
 );
