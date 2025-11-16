@@ -1,11 +1,10 @@
 # Interactive 3D Room Portfolio
 
-A personal portfolio website featuring an immersive and interactive 3D room built with React Three Fiber and GSAP. The camera and 3D objects animate based on the user's scroll position, creating a dynamic "scrollytelling" experience.
+A personal portfolio website featuring an immersive and interactive 3D room built with React Three Fiber and GSAP. The camera and 3D objects animate based on the user's scroll position, creating a dynamic "scrolltelling" experience.
 
-**[Live Demo](https://your-live-project-url.com)**
+**[Live Demo][(https://room-portfolio-alpha.vercel.app/)]**
 
 ![Project Screenshot](./public/screenshot.png)
-*(You should replace this with a screenshot or GIF of your project. Place the image in a `public` folder.)*
 
 ## About The Project
 
@@ -24,7 +23,7 @@ The main scene features a 3D model of a room that the user explores by scrolling
 ## Tech Stack
 
 -   **Frontend:** [React](https://reactjs.org/)
--   **3D Graphics:** [React Three Fiber](https://docs.pmnd.rs/react-three-fiber), [Drei](https://github.com/pmndrs/drei)
+-   **3D Graphics:** [React Three Fiber](https://docs.pmnd.rs/react-three-fiber), [Drei](https://github.com/pmndrs/drei), [GLSL](https://thebookofshaders.com/)
 -   **Animation:** [GSAP](https://greensock.com/gsap/), [ScrollTrigger](https://greensock.com/scrolltrigger/)
 -   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 -   **Smooth Scrolling:** [Lenis](https://github.com/studio-freight/lenis)
@@ -59,12 +58,10 @@ To get a local copy up and running, follow these simple steps.
     ```
     Open [http://localhost:5173](http://localhost:5173) (or whatever port is shown) to view it in your browser.
 
-## Acknowledgements
+## Asset Creation
 
--   The 3D room model (`room.glb`) was created by [Artist Name/Source] and is used under [License Type, e.g., CC-BY 4.0]. *(It's very important to credit the artist if you didn't create the model yourself!)*
-
+-   The 3D room model (`room.glb`) was custom-designed and modeled for this project using Blender.
+-   
 ## Contact
 
-Shi Xuan - [your.email@example.com](mailto:your.email@example.com)
-
-Project Link: [https://github.com/your-username/your-repo-name](https://github.com/your-username/your-repo-name)
+Shi Xuan - [shixuanx@gmail.com](mailto:shixuanx@gmail.com)
