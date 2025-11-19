@@ -5,10 +5,10 @@ import Content from "./components/ui/Content";
 import SmoothScroll from "./components/ui/SmoothScroll";
 import { Suspense, useEffect, useState } from "react";
 import Loader from "./components/ui/Loader";
-import Scene from "./components/experience/Scene";
 import { useProgress } from "@react-three/drei";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import Experience from "./Experience";
 
 function App() {
     const { active } = useProgress();
@@ -34,7 +34,7 @@ function App() {
                 className="canvas-background"
             >
                 <Suspense fallback={null}>
-                    <Scene visible={isLoaded} />
+                    {isLoaded && <Experience />}
                     <Loader />
                 </Suspense>
             </Canvas>
@@ -46,16 +46,12 @@ function App() {
             >
                 <Content />
             </div>
+            <Analytics />
+            <SpeedInsights />
         </>
     );
 }
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 
-root.render(
-    <Suspense fallback={null}>
-        <App />
-        <Analytics />
-        <SpeedInsights />
-    </Suspense>
-);
+root.render(<App />);
