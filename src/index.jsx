@@ -11,11 +11,15 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import Experience from "./Experience";
 
 function App() {
+    const { active } = useProgress();
     const [isLoaded, setIsLoaded] = useState(false);
 
-    const handleLoadingComplete = () => {
-        setIsLoaded(true);
-    };
+    useEffect(() => {
+        // When loading is finished, update the state
+        if (!active) {
+            setIsLoaded(true);
+        }
+    }, [active]);
 
     return (
         <>
@@ -30,14 +34,13 @@ function App() {
                 className="canvas-background"
             >
                 <Suspense fallback={null}>
-                    <Experience />
-                    <Loader onFinished={handleLoadingComplete} />
+                    {isLoaded && <Experience />}
+                    <Loader />
                 </Suspense>
             </Canvas>
             <div
                 style={{
                     opacity: isLoaded ? 1 : 0,
-                    pointerEvents: isLoaded ? "auto" : "none",
                     transition: "opacity 2s ease-in-out 0.5s",
                 }}
             >

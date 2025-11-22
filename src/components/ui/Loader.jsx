@@ -1,7 +1,7 @@
 import { Html, useProgress } from "@react-three/drei";
 import { useEffect, useRef, useState } from "react";
 
-export default function Loader({ onFinished }) {
+export default function Loader() {
     const { progress, active } = useProgress();
     const [displayProgress, setDisplayProgress] = useState(0);
     const [show, setShow] = useState(true);
@@ -24,24 +24,13 @@ export default function Loader({ onFinished }) {
     }, [progress, active]);
 
     useEffect(() => {
-        // 2. Only trigger completion if active is false AND we have actually loaded something (progress > 0)
-        // or purely rely on !active after the initial mount.
-        if (!active && displayProgress === 100) {
-            // Wait a moment for the 100% to be visible
-            const timeout = setTimeout(() => {
-                setShow(false);
-
-                // 3. Tell the App component we are truly done
-                if (onFinished) onFinished();
-            }, 800);
-
-            return () => clearTimeout(timeout);
-        }
-    }, [active, displayProgress, onFinished]);
-
-    useEffect(() => {
+        // When loading is complete (active is false)
         if (!active) {
             setDisplayProgress(100);
+            // Wait a moment for the 100% to be visible
+            setTimeout(() => {
+                setShow(false);
+            }, 800);
         }
     }, [active]);
 
