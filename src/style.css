@@ -1,7 +1,13 @@
 @import "tailwindcss";
 
+html {
+    background-color: #3b0764;
+    overscroll-behavior-y: none;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
 }
 
 #root {
