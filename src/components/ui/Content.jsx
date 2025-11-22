@@ -37,7 +37,7 @@ export default function Content() {
 
     return (
         <>
-            <div className="content min-h-screen">
+            <div className="content min-h-[100dvh]">
                 <div className="content-overlay">
                     <section className="description">
                         <div className="intro absolute md:right-[60%] top-[65%] md:top-[70%] left-[5%]">
