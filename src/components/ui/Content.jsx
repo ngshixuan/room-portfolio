@@ -7,24 +7,17 @@ import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 
-ScrollTrigger.config({ ignoreMobileResize: true });
-
 const useWindowSize = () => {
     const [size, setSize] = useState({
-        width: typeof window !== "undefined" ? window.innerWidth : 0,
-        height: typeof window !== "undefined" ? window.innerHeight : 0,
+        width: window.innerWidth,
+        height: window.innerHeight,
     });
 
     useEffect(() => {
         const handleResize = () => {
-            setSize((prev) => {
-                if (prev.width !== window.innerWidth) {
-                    return {
-                        width: window.innerWidth,
-                        height: window.innerHeight,
-                    };
-                }
-                return prev;
+            setSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
             });
         };
 
@@ -41,8 +34,13 @@ export default function Content() {
     const isMobile = width < 768;
 
     useEffect(() => {
-        ScrollTrigger.refresh();
-    }, [width]);
+        const timeoutId = setTimeout(() => {
+            console.log("Window height changed, refreshing ScrollTrigger...");
+            ScrollTrigger.refresh();
+        }, 100); // 100ms delay
+
+        return () => clearTimeout(timeoutId);
+    }, [height]);
 
     return (
         <>
