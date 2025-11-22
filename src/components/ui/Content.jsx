@@ -9,22 +9,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 const useWindowSize = () => {
     const [size, setSize] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width: typeof window !== "undefined" ? window.innerWidth : 0,
+        height: typeof window !== "undefined" ? window.innerHeight : 0,
     });
 
     useEffect(() => {
         const handleResize = () => {
-            setSize({
-                width: window.innerWidth,
-                height: window.innerHeight,
-            });
+            if (window.innerWidth !== size.width) {
+                setSize({
+                    width: window.innerWidth,
+                    height: window.innerHeight,
+                });
+            }
         };
 
         window.addEventListener("resize", handleResize);
 
         return () => window.removeEventListener("resize", handleResize);
-    }, []);
+    }, [size.width]);
     return size;
 };
 
