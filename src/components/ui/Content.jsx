@@ -7,24 +7,17 @@ import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 
-ScrollTrigger.config({ ignoreMobileResize: true });
-
 const useWindowSize = () => {
     const [size, setSize] = useState({
-        width: typeof window !== "undefined" ? window.innerWidth : 0,
-        height: typeof window !== "undefined" ? window.innerHeight : 0,
+        width: window.innerWidth,
+        height: window.innerHeight,
     });
 
     useEffect(() => {
         const handleResize = () => {
-            setSize((prev) => {
-                if (prev.width !== window.innerWidth) {
-                    return {
-                        width: window.innerWidth,
-                        height: window.innerHeight,
-                    };
-                }
-                return prev;
+            setSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
             });
         };
 
@@ -40,13 +33,9 @@ export default function Content() {
 
     const isMobile = width < 768;
 
-    useEffect(() => {
-        ScrollTrigger.refresh();
-    }, [width]);
-
     return (
         <>
-            <div className="content min-h-[100svh]">
+            <div className="content min-h-screen">
                 <div className="content-overlay">
                     <section className="description">
                         <div className="intro absolute md:right-[60%] top-[65%] md:top-[70%] left-[5%]">

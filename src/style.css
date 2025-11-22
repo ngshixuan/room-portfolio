@@ -4,13 +4,11 @@ body {
     font-family: "Montserrat", sans-serif;
     width: 100%;
     height: auto;
-    overflow-x: hidden;
 }
 
 .canvas-background {
     position: fixed !important;
     height: 100vh;
-    height: 100dvh;
     width: 100%;
     z-index: -1;
 }
@@ -66,7 +64,7 @@ body {
 
 .about {
     background: rgba(232, 237, 230, 0.6);
-    min-height: 150vh;
+    height: 150vh;
 }
 
 .work {
