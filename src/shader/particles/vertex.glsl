@@ -46,5 +46,6 @@ void main() {
     gl_Position = projectedPosition;
 
     // Set the size of the points
-    gl_PointSize = 8.0; // You can make this a uniform for dynamic control
+    gl_PointSize = 8.0 * aRandom + 3.0;
+    
 }
