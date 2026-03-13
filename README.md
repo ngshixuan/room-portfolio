@@ -23,7 +23,7 @@ The main scene features a 3D model of a room that the user explores by scrolling
 ## Tech Stack
 
 -   **Frontend:** [React](https://reactjs.org/)
--   **3D Graphics:** [React Three Fiber](https://docs.pmnd.rs/react-three-fiber), [Drei](https://github.com/pmndrs/drei), [GLSL](https://thebookofshaders.com/)
+-   **3D Graphics:** [React Three Fiber](https://docs.pmnd.rs/react-three-fiber),[Three.js](https://threejs.org/), [Drei](https://github.com/pmndrs/drei), [GLSL](https://thebookofshaders.com/)
 -   **Animation:** [GSAP](https://greensock.com/gsap/), [ScrollTrigger](https://greensock.com/scrolltrigger/)
 -   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 -   **Smooth Scrolling:** [Lenis](https://github.com/studio-freight/lenis)
