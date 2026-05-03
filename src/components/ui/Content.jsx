@@ -321,6 +321,13 @@ export default function Content() {
                                         />
                                         <div className="img-content fade">
                                             <a
+                                                href="https://my-travel-app-frontend.onrender.com/"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <GlobeIcon />
+                                            </a>
+                                            <a
                                                 href="https://github.com/ngshixuan/my-travel-app"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
@@ -360,6 +367,17 @@ export default function Content() {
                                         </span>
                                     </div>
                                     <div className="card-links">
+                                        <a
+                                            href="https://my-travel-app-frontend.onrender.com/"
+                                            className="card-link"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Live{" "}
+                                            <span className="card-link-arrow">
+                                                →
+                                            </span>
+                                        </a>
                                         <a
                                             href="https://github.com/ngshixuan/my-travel-app"
                                             className="card-link"
