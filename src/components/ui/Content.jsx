@@ -1,6 +1,7 @@
 import ecoEatsImg from "../../images/ecoeats.png";
 import weatherImg from "../../images/weather.png";
 import threejsImg from "../../images/threejs.png";
+import wanderaiImg from "../../images/wanderai.png";
 import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -63,7 +64,9 @@ export default function Content() {
                             <h1 className="text-3xl md:text-6xl pb-2 md:pb-5 font-bold">
                                 Ng Shi Xuan
                             </h1>
-                            <p className="text-xl md:text-2xl tracking-widest">Web Developer</p>
+                            <p className="text-xl md:text-2xl tracking-widest">
+                                Full Stack Engineer
+                            </p>
                         </div>
 
                         {/* Portfolio label */}
@@ -76,13 +79,25 @@ export default function Content() {
 
                         {/* Scroll indicator */}
                         <div className="arrow-svg-wrapper absolute right-[50%] md:bottom-[10%] bottom-[15%] flex flex-col items-center gap-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                height="24"
+                                width="24"
+                            >
                                 <path
                                     fill="currentColor"
                                     d="M12 14.95q-.2 0-.375-.063-.175-.062-.325-.212L6.675 10.05q-.275-.275-.262-.688.012-.412.287-.687.275-.275.7-.275.425 0 .7.275l3.9 3.9 3.925-3.925q.275-.275.688-.263.412.013.687.288.275.275.275.7 0 .425-.275.7l-4.6 4.6q-.15.15-.325.212-.175.063-.375.063Z"
                                 />
                             </svg>
-                            <span style={{ fontSize: "0.55rem", letterSpacing: "3px", color: "#d9c9b9" }}>SCROLL</span>
+                            <span
+                                style={{
+                                    fontSize: "0.55rem",
+                                    letterSpacing: "3px",
+                                    color: "#d9c9b9",
+                                }}
+                            >
+                                SCROLL
+                            </span>
                         </div>
                     </section>
                     <section className="animation-section"></section>
@@ -101,14 +116,21 @@ export default function Content() {
                             <div className="about-text w-full md:w-5/6 leading-[1.8] text-base md:text-lg">
                                 <p className="pb-4">
                                     Hi there, I am a{" "}
-                                    <strong>self-taught front-end developer</strong>{" "}
-                                    passionate about building impactful web experiences.
+                                    <strong>
+                                        self-taught front-end developer
+                                    </strong>{" "}
+                                    passionate about building impactful web
+                                    experiences.
                                 </p>
                                 <p>
-                                    My journey started with curiosity — learning tools like{" "}
-                                    <strong>ReactJS, React Three Fiber, ThreeJS, Blender</strong>{" "}
-                                    on my own, experimenting with APIs, and turning small ideas
-                                    into complete projects.
+                                    My journey started with curiosity — learning
+                                    tools like{" "}
+                                    <strong>
+                                        ReactJS, React Three Fiber, ThreeJS,
+                                        Blender
+                                    </strong>{" "}
+                                    on my own, experimenting with APIs, and
+                                    turning small ideas into complete projects.
                                 </p>
                             </div>
                         </section>
@@ -128,105 +150,284 @@ export default function Content() {
 
                             <div className="work-text w-full md:w-9/10">
                                 {/* Card 1 */}
-                                <div className="work-card rounded-3xl mb-10 p-6 md:p-8" data-index="01">
+                                <div
+                                    className="work-card rounded-3xl mb-10 p-6 md:p-8"
+                                    data-index="01"
+                                >
                                     <h3>EcoEats</h3>
                                     <div className="img-wrapper">
-                                        <img src={ecoEatsImg} alt="EcoEats project screenshot" />
+                                        <img
+                                            src={ecoEatsImg}
+                                            alt="EcoEats project screenshot"
+                                        />
                                         <div className="img-content fade">
-                                            <a href="https://ecoeats-ten.vercel.app" target="_blank" rel="noopener noreferrer">
+                                            <a
+                                                href="https://ecoeats-ten.vercel.app"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
                                                 <GlobeIcon />
                                             </a>
-                                            <a href="https://github.com/ngshixuan/ecoeats" target="_blank" rel="noopener noreferrer">
+                                            <a
+                                                href="https://github.com/ngshixuan/ecoeats"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
                                                 <GitHubIcon />
                                             </a>
                                         </div>
                                     </div>
-                                    <p className="work-card-subtitle">Food Waste Reduction App</p>
+                                    <p className="work-card-subtitle">
+                                        Food Waste Reduction App
+                                    </p>
                                     <p className="card-desc">
-                                        A web platform designed to raise awareness about global food
-                                        waste and inspire collective action. Educates users on the
-                                        impact of waste and encourages sustainable habits through
-                                        interactive features and engaging visuals.
+                                        A web platform designed to raise
+                                        awareness about global food waste and
+                                        inspire collective action. Educates
+                                        users on the impact of waste and
+                                        encourages sustainable habits through
+                                        interactive features and engaging
+                                        visuals.
                                     </p>
                                     <div className="flex flex-wrap text-xs mt-4 tech-stack">
-                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">React</span>
-                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">Firebase</span>
-                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">Tailwind</span>
-                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">Ant Design</span>
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
+                                            React
+                                        </span>
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
+                                            Firebase
+                                        </span>
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
+                                            Tailwind
+                                        </span>
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
+                                            Ant Design
+                                        </span>
                                     </div>
                                     <div className="card-links">
-                                        <a href="https://ecoeats-ten.vercel.app" className="card-link" target="_blank" rel="noopener noreferrer">
-                                            Live <span className="card-link-arrow">→</span>
+                                        <a
+                                            href="https://ecoeats-ten.vercel.app"
+                                            className="card-link"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Live{" "}
+                                            <span className="card-link-arrow">
+                                                →
+                                            </span>
                                         </a>
-                                        <a href="https://github.com/ngshixuan/ecoeats" className="card-link" target="_blank" rel="noopener noreferrer">
-                                            GitHub <span className="card-link-arrow">→</span>
+                                        <a
+                                            href="https://github.com/ngshixuan/ecoeats"
+                                            className="card-link"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            GitHub{" "}
+                                            <span className="card-link-arrow">
+                                                →
+                                            </span>
                                         </a>
                                     </div>
                                 </div>
 
                                 {/* Card 2 */}
-                                <div className="work-card rounded-3xl mb-10 p-6 md:p-8" data-index="02">
+                                <div
+                                    className="work-card rounded-3xl mb-10 p-6 md:p-8"
+                                    data-index="02"
+                                >
                                     <h3>ThreeJS 3D Text</h3>
                                     <div className="img-wrapper">
-                                        <img src={threejsImg} alt="ThreeJS 3D Text project screenshot" />
+                                        <img
+                                            src={threejsImg}
+                                            alt="ThreeJS 3D Text project screenshot"
+                                        />
                                         <div className="img-content fade">
-                                            <a href="https://threejs-nine-psi.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                            <a
+                                                href="https://threejs-nine-psi.vercel.app/"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
                                                 <GlobeIcon />
                                             </a>
-                                            <a href="https://github.com/ngshixuan/threejs" target="_blank" rel="noopener noreferrer">
+                                            <a
+                                                href="https://github.com/ngshixuan/threejs"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
                                                 <GitHubIcon />
                                             </a>
                                         </div>
                                     </div>
-                                    <p className="work-card-subtitle">Interactive 3D Experience</p>
+                                    <p className="work-card-subtitle">
+                                        Interactive 3D Experience
+                                    </p>
                                     <p className="card-desc">
-                                        A visually immersive 3D experience built with Three.js. Users
-                                        can explore a floating field of torus shapes and 3D text by
-                                        freely orbiting the scene, showcasing the possibilities of
-                                        WebGL and interactive graphics on the web.
+                                        A visually immersive 3D experience built
+                                        with Three.js. Users can explore a
+                                        floating field of torus shapes and 3D
+                                        text by freely orbiting the scene,
+                                        showcasing the possibilities of WebGL
+                                        and interactive graphics on the web.
                                     </p>
                                     <div className="flex flex-wrap text-xs mt-4 tech-stack">
-                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">HTML</span>
-                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">CSS</span>
-                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">JavaScript</span>
-                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">ThreeJS</span>
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
+                                            HTML
+                                        </span>
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
+                                            CSS
+                                        </span>
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
+                                            JavaScript
+                                        </span>
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
+                                            ThreeJS
+                                        </span>
                                     </div>
                                     <div className="card-links">
-                                        <a href="https://threejs-nine-psi.vercel.app/" className="card-link" target="_blank" rel="noopener noreferrer">
-                                            Live <span className="card-link-arrow">→</span>
+                                        <a
+                                            href="https://threejs-nine-psi.vercel.app/"
+                                            className="card-link"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Live{" "}
+                                            <span className="card-link-arrow">
+                                                →
+                                            </span>
                                         </a>
-                                        <a href="https://github.com/ngshixuan/threejs" className="card-link" target="_blank" rel="noopener noreferrer">
-                                            GitHub <span className="card-link-arrow">→</span>
+                                        <a
+                                            href="https://github.com/ngshixuan/threejs"
+                                            className="card-link"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            GitHub{" "}
+                                            <span className="card-link-arrow">
+                                                →
+                                            </span>
                                         </a>
                                     </div>
                                 </div>
 
                                 {/* Card 3 */}
-                                <div className="work-card rounded-3xl mb-10 p-6 md:p-8" data-index="03">
-                                    <h3>Weather Forecast App</h3>
+                                <div
+                                    className="work-card rounded-3xl mb-10 p-6 md:p-8"
+                                    data-index="03"
+                                >
+                                    <h3>wander.ai</h3>
                                     <div className="img-wrapper">
-                                        <img src={weatherImg} alt="Weather Forecast App screenshot" />
+                                        <img
+                                            src={wanderaiImg}
+                                            alt="wander.ai project screenshot"
+                                        />
                                         <div className="img-content fade">
-                                            <a href="https://github.com/ngshixuan/Weather-app" target="_blank" rel="noopener noreferrer">
+                                            <a
+                                                href="https://github.com/ngshixuan/my-travel-app"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
                                                 <GitHubIcon />
                                             </a>
                                         </div>
                                     </div>
-                                    <p className="work-card-subtitle">Real-time Weather Data</p>
+                                    <p className="work-card-subtitle">
+                                        AI-Powered Travel Planner
+                                    </p>
                                     <p className="card-desc">
-                                        An interactive platform that keeps users informed about global
-                                        weather conditions. Powered by the AccuWeather API, it provides
-                                        accurate forecasts, temperature trends, and live updates for
+                                        An AI-powered travel planning app that
+                                        generates personalised day-by-day
+                                        itineraries in seconds, complete with
+                                        real-time flight prices, weather
+                                        forecasts, and budget breakdowns.
+                                    </p>
+                                    <div className="flex flex-wrap text-xs mt-4 tech-stack">
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
+                                            React
+                                        </span>
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
+                                            Python Flask
+                                        </span>
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
+                                            Claude API
+                                        </span>
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
+                                            Gemini API
+                                        </span>
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
+                                            SerpAPI
+                                        </span>
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
+                                            WeatherAPI
+                                        </span>
+                                    </div>
+                                    <div className="card-links">
+                                        <a
+                                            href="https://github.com/ngshixuan/my-travel-app"
+                                            className="card-link"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            GitHub{" "}
+                                            <span className="card-link-arrow">
+                                                →
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                {/* Card 4 */}
+                                <div
+                                    className="work-card rounded-3xl mb-10 p-6 md:p-8"
+                                    data-index="04"
+                                >
+                                    <h3>Weather Forecast App</h3>
+                                    <div className="img-wrapper">
+                                        <img
+                                            src={weatherImg}
+                                            alt="Weather Forecast App screenshot"
+                                        />
+                                        <div className="img-content fade">
+                                            <a
+                                                href="https://github.com/ngshixuan/Weather-app"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <GitHubIcon />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <p className="work-card-subtitle">
+                                        Real-time Weather Data
+                                    </p>
+                                    <p className="card-desc">
+                                        An interactive platform that keeps users
+                                        informed about global weather
+                                        conditions. Powered by the AccuWeather
+                                        API, it provides accurate forecasts,
+                                        temperature trends, and live updates for
                                         cities around the world.
                                     </p>
                                     <div className="flex flex-wrap text-xs mt-4 tech-stack">
-                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">HTML</span>
-                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">CSS</span>
-                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">JavaScript</span>
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
+                                            HTML
+                                        </span>
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
+                                            CSS
+                                        </span>
+                                        <span className="tech rounded-full px-3 py-1 mr-2 mb-2">
+                                            JavaScript
+                                        </span>
                                     </div>
                                     <div className="card-links">
-                                        <a href="https://github.com/ngshixuan/Weather-app" className="card-link" target="_blank" rel="noopener noreferrer">
-                                            GitHub <span className="card-link-arrow">→</span>
+                                        <a
+                                            href="https://github.com/ngshixuan/Weather-app"
+                                            className="card-link"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            GitHub{" "}
+                                            <span className="card-link-arrow">
+                                                →
+                                            </span>
                                         </a>
                                     </div>
                                 </div>
@@ -241,7 +442,9 @@ export default function Content() {
                         {isMobile ? (
                             <div className="contact-hero h-screen flex items-center">
                                 <div>
-                                    <div className="section-label mb-6">03 — Contact</div>
+                                    <div className="section-label mb-6">
+                                        03 — Contact
+                                    </div>
                                     <div className="contact-title">
                                         <h1 className="font-light text-4xl uppercase">
                                             Get In Touch
@@ -249,16 +452,25 @@ export default function Content() {
                                     </div>
                                     <div className="contact-card pt-10 mt-6">
                                         <div className="location">
-                                            <div className="contact-meta-label">Location</div>
+                                            <div className="contact-meta-label">
+                                                Location
+                                            </div>
                                             <p>Pasir Ris, Singapore</p>
                                         </div>
-                                        <div className="contact-meta-label">Message</div>
+                                        <div className="contact-meta-label">
+                                            Message
+                                        </div>
                                         <p className="contact-intro">
-                                            I'm currently seeking new opportunities and would love to
-                                            hear about roles where I can contribute my skills in
-                                            React, Three.js, and creative front-end development.
+                                            I'm currently seeking new
+                                            opportunities and would love to hear
+                                            about roles where I can contribute
+                                            my skills in React, Three.js, and
+                                            creative front-end development.
                                         </p>
-                                        <a href="mailto:shixuanx@gmail.com" className="email-btn">
+                                        <a
+                                            href="mailto:shixuanx@gmail.com"
+                                            className="email-btn"
+                                        >
                                             Say hello →
                                         </a>
                                     </div>
@@ -267,24 +479,39 @@ export default function Content() {
                         ) : (
                             <div className="contact-hero flex justify-between items-center h-screen">
                                 <div className="contact-card">
-                                    <div className="section-label mb-8">03 — Contact</div>
+                                    <div className="section-label mb-8">
+                                        03 — Contact
+                                    </div>
                                     <div className="location">
-                                        <div className="contact-meta-label">Location</div>
+                                        <div className="contact-meta-label">
+                                            Location
+                                        </div>
                                         <p>Pasir Ris, Singapore</p>
                                     </div>
-                                    <div className="contact-meta-label">Message</div>
+                                    <div className="contact-meta-label">
+                                        Message
+                                    </div>
                                     <p className="contact-intro">
-                                        I'm currently seeking new opportunities and would love to
-                                        hear about roles where I can contribute my skills in
-                                        React, Three.js, and creative front-end development.
+                                        I'm currently seeking new opportunities
+                                        and would love to hear about roles where
+                                        I can contribute my skills in React,
+                                        Three.js, and creative front-end
+                                        development.
                                     </p>
-                                    <a href="mailto:shixuanx@gmail.com" className="email-btn">
+                                    <a
+                                        href="mailto:shixuanx@gmail.com"
+                                        className="email-btn"
+                                    >
                                         Say hello →
                                     </a>
                                 </div>
                                 <div className="contact-title text-right">
                                     <h1 className="font-light md:text-[13rem] text-4xl uppercase">
-                                        Get<br />In<br />Touch
+                                        Get
+                                        <br />
+                                        In
+                                        <br />
+                                        Touch
                                     </h1>
                                 </div>
                             </div>
@@ -292,8 +519,12 @@ export default function Content() {
 
                         <div className="footer flex justify-between md:text-sm text-xs mb-8">
                             <div>
-                                <a href="mailto:shixuanx@gmail.com">shixuanx@gmail.com</a>
-                                <p className="footer-copy">© {new Date().getFullYear()} Ng Shi Xuan</p>
+                                <a href="mailto:shixuanx@gmail.com">
+                                    shixuanx@gmail.com
+                                </a>
+                                <p className="footer-copy">
+                                    © {new Date().getFullYear()} Ng Shi Xuan
+                                </p>
                             </div>
                             <div className="social flex items-start">
                                 <a

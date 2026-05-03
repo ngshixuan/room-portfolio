@@ -5,45 +5,37 @@ export default function Loader({ onFinished }) {
     const { progress, active } = useProgress();
     const [displayProgress, setDisplayProgress] = useState(0);
     const [show, setShow] = useState(true);
+    const activeRef = useRef(active);
+    const progressRef = useRef(progress);
+
+    useEffect(() => { activeRef.current = active; }, [active]);
+    useEffect(() => { progressRef.current = progress; }, [progress]);
+
+    // Single animation loop — always runs, targets real progress when loading,
+    // targets 100 when done (handles cached/instant loads too).
+    useEffect(() => {
+        let id;
+        const tick = () => {
+            const target = activeRef.current ? progressRef.current : 100;
+            setDisplayProgress((prev) => {
+                if (Math.abs(target - prev) < 0.5) return target;
+                return prev + (target - prev) * 0.08;
+            });
+            id = requestAnimationFrame(tick);
+        };
+        id = requestAnimationFrame(tick);
+        return () => cancelAnimationFrame(id);
+    }, []);
 
     useEffect(() => {
-        if (active) {
-            let animationFrameId;
-            const animate = () => {
-                setDisplayProgress((prev) => {
-                    if (prev >= progress) return progress;
-                    const diff = progress - prev;
-                    const step = diff * 0.1;
-                    return prev + step;
-                });
-                animationFrameId = requestAnimationFrame(animate);
-            };
-            animationFrameId = requestAnimationFrame(animate);
-            return () => cancelAnimationFrame(animationFrameId);
-        }
-    }, [progress, active]);
-
-    useEffect(() => {
-        // 2. Only trigger completion if active is false AND we have actually loaded something (progress > 0)
-        // or purely rely on !active after the initial mount.
-        if (!active && displayProgress === 100) {
-            // Wait a moment for the 100% to be visible
-            const timeout = setTimeout(() => {
+        if (displayProgress >= 99.5) {
+            const t = setTimeout(() => {
                 setShow(false);
-
-                // 3. Tell the App component we are truly done
                 if (onFinished) onFinished();
             }, 800);
-
-            return () => clearTimeout(timeout);
+            return () => clearTimeout(t);
         }
-    }, [active, displayProgress, onFinished]);
-
-    useEffect(() => {
-        if (!active) {
-            setDisplayProgress(100);
-        }
-    }, [active]);
+    }, [displayProgress, onFinished]);
 
     return (
         <Html fullscreen>
@@ -54,17 +46,18 @@ export default function Loader({ onFinished }) {
                     transition: "opacity 1s ease",
                 }}
             >
+                <span className="loader-watermark">NSX</span>
                 <div className="progress-container">
-                    <h2 className="loader-title">Loading Experience</h2>
+                    <p className="loader-label">Loading Experience</p>
+                    <div className="loader-percentage">
+                        {Math.round(displayProgress)}
+                    </div>
                     <div className="progress-bar">
                         <div
                             className="progress-fill"
                             style={{ width: `${displayProgress}%` }}
                         />
                     </div>
-                    <span className="progress-text">
-                        {Math.round(displayProgress)}%
-                    </span>
                 </div>
             </div>
         </Html>
