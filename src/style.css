@@ -216,6 +216,49 @@ body {
     transition: width 0.3s ease;
 }
 
+/* ─── About stats ─── */
+.about-stats {
+    padding: 28px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    margin: 32px 0;
+    gap: 20px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #b8956a;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.6rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #888;
+}
+
+/* ─── About skills ─── */
+.about-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 32px;
+}
+
+.skill-category-label {
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #a0836b;
+    margin-bottom: 10px;
+}
+
 /* ─── Work cards ─── */
 .work-card {
     background-color: rgba(255, 255, 255, 0.55);

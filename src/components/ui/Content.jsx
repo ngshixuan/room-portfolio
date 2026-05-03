@@ -52,7 +52,7 @@ export default function Content() {
 
     return (
         <>
-            <div className="content min-h-[100dvh]">
+            <div className="content min-h-dvh">
                 <div className="content-overlay">
                     <section className="description">
                         {/* Name + title */}
@@ -115,23 +115,78 @@ export default function Content() {
                             </div>
                             <div className="about-text w-full md:w-5/6 leading-[1.8] text-base md:text-lg">
                                 <p className="pb-4">
-                                    Hi there, I am a{" "}
+                                    Fullstack Software Engineer based in
+                                    Singapore with{" "}
+                                    <strong>2 years of production experience</strong>{" "}
+                                    building real-time systems and web
+                                    applications. Currently shipping{" "}
                                     <strong>
-                                        self-taught front-end developer
+                                        industrial telemetry infrastructure
                                     </strong>{" "}
-                                    passionate about building impactful web
-                                    experiences.
+                                    at 99.9% availability.
                                 </p>
                                 <p>
-                                    My journey started with curiosity — learning
-                                    tools like{" "}
-                                    <strong>
-                                        ReactJS, React Three Fiber, ThreeJS,
-                                        Blender
-                                    </strong>{" "}
-                                    on my own, experimenting with APIs, and
-                                    turning small ideas into complete projects.
+                                    JavaScript/TypeScript specialist with a{" "}
+                                    <strong>security background (CEH)</strong> —
+                                    I build things that are fast, reliable, and
+                                    hard to break.
                                 </p>
+                            </div>
+
+                            {/* Stats */}
+                            <div className="about-stats grid grid-cols-2 md:grid-cols-4 w-full md:w-5/6">
+                                <div>
+                                    <span className="stat-number">2</span>
+                                    <span className="stat-label">Years Production Exp.</span>
+                                </div>
+                                <div>
+                                    <span className="stat-number">99.9%</span>
+                                    <span className="stat-label">System Availability</span>
+                                </div>
+                                <div>
+                                    <span className="stat-number">40%</span>
+                                    <span className="stat-label">Latency Reduction</span>
+                                </div>
+                                <div>
+                                    <span className="stat-number">3.89</span>
+                                    <span className="stat-label">CGPA · CEH Certified</span>
+                                </div>
+                            </div>
+
+                            {/* Skills */}
+                            <div className="about-skills w-full md:w-5/6 pb-16">
+                                <div className="skill-group">
+                                    <div className="skill-category-label">Frontend</div>
+                                    <div className="flex flex-wrap text-xs tech-stack">
+                                        {['React', 'TypeScript', 'Next.js', 'Three.js', 'GSAP', 'Tailwind'].map(s => (
+                                            <span key={s} className="tech rounded-full px-3 py-1 mr-2 mb-2">{s}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div className="skill-group">
+                                    <div className="skill-category-label">Backend</div>
+                                    <div className="flex flex-wrap text-xs tech-stack">
+                                        {['Node.js', 'C#', 'Python', 'Flask', 'MySQL', 'Firebase', 'REST APIs', 'SSE'].map(s => (
+                                            <span key={s} className="tech rounded-full px-3 py-1 mr-2 mb-2">{s}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div className="skill-group">
+                                    <div className="skill-category-label">AI / ML</div>
+                                    <div className="flex flex-wrap text-xs tech-stack">
+                                        {['Claude API', 'Gemini', 'AWS Bedrock', 'RAG', 'Multi-Agent', 'MCP'].map(s => (
+                                            <span key={s} className="tech rounded-full px-3 py-1 mr-2 mb-2">{s}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div className="skill-group">
+                                    <div className="skill-category-label">Cloud & Tools</div>
+                                    <div className="flex flex-wrap text-xs tech-stack">
+                                        {['AWS', 'Vercel', 'GitLab CI/CD', 'Firebase', 'Postman'].map(s => (
+                                            <span key={s} className="tech rounded-full px-3 py-1 mr-2 mb-2">{s}</span>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -479,11 +534,15 @@ export default function Content() {
                                             Message
                                         </div>
                                         <p className="contact-intro">
-                                            I'm currently seeking new
-                                            opportunities and would love to hear
-                                            about roles where I can contribute
-                                            my skills in React, Three.js, and
-                                            creative front-end development.
+                                            Open to fullstack engineering roles
+                                            where reliability and speed matter.
+                                            I bring production experience in
+                                            real-time systems, a security
+                                            mindset (CEH), and a track record of
+                                            shipping across the full stack — from
+                                            backend APIs to polished frontends.
+                                            If you're building something
+                                            ambitious, let's connect.
                                         </p>
                                         <a
                                             href="mailto:shixuanx@gmail.com"
@@ -510,11 +569,14 @@ export default function Content() {
                                         Message
                                     </div>
                                     <p className="contact-intro">
-                                        I'm currently seeking new opportunities
-                                        and would love to hear about roles where
-                                        I can contribute my skills in React,
-                                        Three.js, and creative front-end
-                                        development.
+                                        Open to fullstack engineering roles
+                                        where reliability and speed matter. I
+                                        bring production experience in real-time
+                                        systems, a security mindset (CEH), and a
+                                        track record of shipping across the full
+                                        stack — from backend APIs to polished
+                                        frontends. If you're building something
+                                        ambitious, let's connect.
                                     </p>
                                     <a
                                         href="mailto:shixuanx@gmail.com"
