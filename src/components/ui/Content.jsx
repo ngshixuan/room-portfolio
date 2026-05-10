@@ -117,7 +117,9 @@ export default function Content() {
                                 <p className="pb-4">
                                     Fullstack Software Engineer based in
                                     Singapore with{" "}
-                                    <strong>2 years of production experience</strong>{" "}
+                                    <strong>
+                                        2 years of production experience
+                                    </strong>{" "}
                                     building real-time systems and web
                                     applications. Currently shipping{" "}
                                     <strong>
@@ -137,53 +139,118 @@ export default function Content() {
                             <div className="about-stats grid grid-cols-2 md:grid-cols-4 w-full md:w-5/6">
                                 <div>
                                     <span className="stat-number">2</span>
-                                    <span className="stat-label">Years Production Exp.</span>
+                                    <span className="stat-label">
+                                        Years Production Exp.
+                                    </span>
                                 </div>
                                 <div>
                                     <span className="stat-number">99.9%</span>
-                                    <span className="stat-label">System Availability</span>
+                                    <span className="stat-label">
+                                        System Availability
+                                    </span>
                                 </div>
                                 <div>
                                     <span className="stat-number">40%</span>
-                                    <span className="stat-label">Latency Reduction</span>
+                                    <span className="stat-label">
+                                        Latency Reduction
+                                    </span>
                                 </div>
                                 <div>
                                     <span className="stat-number">3.89</span>
-                                    <span className="stat-label">CGPA · CEH Certified</span>
+                                    <span className="stat-label">
+                                        CGPA · CEH Certified
+                                    </span>
                                 </div>
                             </div>
 
                             {/* Skills */}
                             <div className="about-skills w-full md:w-5/6 pb-16">
                                 <div className="skill-group">
-                                    <div className="skill-category-label">Frontend</div>
+                                    <div className="skill-category-label">
+                                        Frontend
+                                    </div>
                                     <div className="flex flex-wrap text-xs tech-stack">
-                                        {['React', 'TypeScript', 'Next.js', 'Three.js', 'GSAP', 'Tailwind'].map(s => (
-                                            <span key={s} className="tech rounded-full px-3 py-1 mr-2 mb-2">{s}</span>
+                                        {[
+                                            "React",
+                                            "TypeScript",
+                                            "Next.js",
+                                            "Three.js",
+                                            "GSAP",
+                                            "Tailwind",
+                                        ].map((s) => (
+                                            <span
+                                                key={s}
+                                                className="tech rounded-full px-3 py-1 mr-2 mb-2"
+                                            >
+                                                {s}
+                                            </span>
                                         ))}
                                     </div>
                                 </div>
                                 <div className="skill-group">
-                                    <div className="skill-category-label">Backend</div>
+                                    <div className="skill-category-label">
+                                        Backend
+                                    </div>
                                     <div className="flex flex-wrap text-xs tech-stack">
-                                        {['Node.js', 'C#', 'Python', 'Flask', 'MySQL', 'Firebase', 'REST APIs', 'SSE'].map(s => (
-                                            <span key={s} className="tech rounded-full px-3 py-1 mr-2 mb-2">{s}</span>
+                                        {[
+                                            "Node.js",
+                                            "C#",
+                                            "Python",
+                                            "Flask",
+                                            "MySQL",
+                                            "Firebase",
+                                            "REST APIs",
+                                            "SSE",
+                                        ].map((s) => (
+                                            <span
+                                                key={s}
+                                                className="tech rounded-full px-3 py-1 mr-2 mb-2"
+                                            >
+                                                {s}
+                                            </span>
                                         ))}
                                     </div>
                                 </div>
                                 <div className="skill-group">
-                                    <div className="skill-category-label">AI / ML</div>
+                                    <div className="skill-category-label">
+                                        AI / ML
+                                    </div>
                                     <div className="flex flex-wrap text-xs tech-stack">
-                                        {['Claude API', 'Gemini', 'AWS Bedrock', 'RAG', 'Multi-Agent', 'MCP'].map(s => (
-                                            <span key={s} className="tech rounded-full px-3 py-1 mr-2 mb-2">{s}</span>
+                                        {[
+                                            "Claude API",
+                                            "Gemini",
+                                            "AWS Bedrock",
+                                            "RAG",
+                                            "Multi-Agent",
+                                            "MCP",
+                                        ].map((s) => (
+                                            <span
+                                                key={s}
+                                                className="tech rounded-full px-3 py-1 mr-2 mb-2"
+                                            >
+                                                {s}
+                                            </span>
                                         ))}
                                     </div>
                                 </div>
                                 <div className="skill-group">
-                                    <div className="skill-category-label">Cloud & Tools</div>
+                                    <div className="skill-category-label">
+                                        Cloud & Tools
+                                    </div>
                                     <div className="flex flex-wrap text-xs tech-stack">
-                                        {['AWS', 'Vercel', 'GitLab CI/CD', 'Firebase', 'Postman'].map(s => (
-                                            <span key={s} className="tech rounded-full px-3 py-1 mr-2 mb-2">{s}</span>
+                                        {[
+                                            "AWS",
+                                            "Vercel",
+                                            "GitLab CI/CD",
+                                            "Firebase",
+                                            "Postman",
+                                        ].map((s) => (
+                                            <span
+                                                key={s}
+                                                className="tech rounded-full px-3 py-1 mr-2 mb-2"
+                                            >
+                                                {s}
+                                            </span>
                                         ))}
                                     </div>
                                 </div>
@@ -539,10 +606,10 @@ export default function Content() {
                                             I bring production experience in
                                             real-time systems, a security
                                             mindset (CEH), and a track record of
-                                            shipping across the full stack — from
-                                            backend APIs to polished frontends.
-                                            If you're building something
-                                            ambitious, let's connect.
+                                            shipping across the full stack —
+                                            from backend APIs to polished
+                                            frontends. If you're building
+                                            something ambitious, let's connect.
                                         </p>
                                         <a
                                             href="mailto:shixuanx@gmail.com"
@@ -608,7 +675,7 @@ export default function Content() {
                             </div>
                             <div className="social flex items-start">
                                 <a
-                                    href="https://www.linkedin.com/in/ng-s-777563122/"
+                                    href="https://www.linkedin.com/in/ng-shixuan/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
